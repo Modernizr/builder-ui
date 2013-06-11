@@ -1,17 +1,37 @@
 [
   {
-    "doc": null,
+    "name": "Application Cache",
+    "property": "applicationcache",
+    "caniuse": "offline-apps",
+    "tags": [
+      "storage",
+      "offline"
+    ],
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en/docs/HTML/Using_the_application_cache"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "html5-gears",
+        "authors": [
+          "Brad Neuberg"
+        ],
+        "href": "https://code.google.com/p/html5-gears/",
+        "licenses": [
+          "Apache2"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the Application Cache, for storing data to enable web-based applications run offline.</p>\n<p>The API has been <a href=\"http://alistapart.com/article/application-cache-is-a-douchebag\">heavily criticized</a> and discussions are underway to address this.</p>\n",
     "deps": [],
     "path": "./feature-detects/applicationcache.js",
     "amdPath": "test/applicationcache",
-    "name": "test/applicationcache",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "applicationcache",
     "authors": [],
     "knownBugs": []
   },
@@ -40,266 +60,547 @@
     "cssclass": "audio"
   },
   {
-    "doc": null,
+    "name": "Battery API",
+    "property": "batteryapi",
+    "aliases": [
+      "battery-api"
+    ],
+    "tags": [
+      "device",
+      "media"
+    ],
+    "authors": [
+      "Paul Sayre"
+    ],
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en/DOM/window.navigator.mozBattery"
+      }
+    ],
+    "doc": "<p>Detect support for the Battery API, for accessing information about the system&#39;s battery charge level.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/battery.js",
     "amdPath": "test/battery",
-    "name": "test/battery",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "batteryapi",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Blob constructor",
+    "property": "blobconstructor",
+    "aliases": [
+      "blob-constructor"
+    ],
+    "caniuse": "blobbuilder",
+    "notes": [
+      {
+        "name": "W3C spec",
+        "href": "http://dev.w3.org/2006/webapi/FileAPI/#constructorBlob"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "Blob.js",
+        "authors": [
+          "Eli Grey"
+        ],
+        "href": "https://github.com/eligrey/Blob.js",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the Blob constructor, for creating file-like objects of immutable, raw data.</p>\n",
     "deps": [],
     "path": "./feature-detects/blob.js",
     "amdPath": "test/blob",
-    "name": "test/blob",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "blobconstructor",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Canvas",
+    "property": "canvas",
+    "caniuse": "canvas",
+    "tags": [
+      "canvas",
+      "graphics"
+    ],
+    "polyfills": [
+      {
+        "name": "FlashCanvas",
+        "authors": [
+          "Shinya Muramatsu"
+        ],
+        "href": "http://flashcanvas.net/"
+      },
+      {
+        "name": "Explorer Canvas",
+        "authors": [
+          "Erik Arvidsson"
+        ],
+        "href": "https://code.google.com/p/explorercanvas/",
+        "licenses": [
+          "Apache2"
+        ]
+      },
+      {
+        "name": "Silverlight HTML 5 Canvas",
+        "href": "http://slcanvas.codeplex.com/"
+      },
+      {
+        "name": "fxCanvas",
+        "authors": [
+          "Evgeny Burzak"
+        ],
+        "href": "http://burzak.com/proj/fxcanvas/",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the <code>&lt;canvas&gt;</code> element for 2D drawing.</p>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/canvas.js",
     "amdPath": "test/canvas",
-    "name": "test/canvas",
-    "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "canvas",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Canvas text",
+    "property": "canvastext",
+    "caniuse": "canvas-text",
+    "tags": [
+      "canvas",
+      "graphics"
+    ],
+    "polyfills": [
+      {
+        "name": "canvas-text",
+        "authors": [
+          "Fabien Ménager"
+        ],
+        "href": "https://code.google.com/p/canvas-text/",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the text APIs for <code>&lt;canvas&gt;</code> elements.</p>\n",
     "deps": [
       "createElement",
       "test/canvas"
     ],
     "path": "./feature-detects/canvastext.js",
     "amdPath": "test/canvastext",
-    "name": "test/canvastext",
-    "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "canvastext",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Content Editable",
+    "property": "contenteditable",
+    "caniuse": "contenteditable",
+    "knownBugs": [
+      "This is known to false positive in some mobile browsers. Here is a whitelist of verified working browsers: http://bit.ly/15RIQ9A"
+    ],
+    "notes": [
+      {
+        "name": "WHATWG spec",
+        "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable"
+      }
+    ],
+    "doc": "<p>Detects support for the <code>contenteditable</code> attribute of elements, allowing their DOM text contents to be edited directly by the user.</p>\n",
     "deps": [
       "docElement"
     ],
     "path": "./feature-detects/contenteditable.js",
     "amdPath": "test/contenteditable",
-    "name": "test/contenteditable",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "contenteditable",
     "tags": [],
-    "authors": [],
-    "knownBugs": []
+    "authors": []
   },
   {
-    "doc": null,
+    "name": "Content Security Policy",
+    "property": "contentsecuritypolicy",
+    "caniuse": "contentsecuritypolicy",
+    "tags": [
+      "security"
+    ],
+    "notes": [
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/TR/CSP/"
+      },
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/Security/CSP"
+      }
+    ],
+    "doc": "<p>Detects support for the Content Security Policy protocol for mitigating and reporting security attacks.</p>\n",
     "deps": [],
     "path": "./feature-detects/contentsecuritypolicy.js",
     "amdPath": "test/contentsecuritypolicy",
-    "name": "test/contentsecuritypolicy",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "contentsecuritypolicy",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Context menus",
+    "property": "contextmenu",
+    "caniuse": "menu",
+    "notes": [
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/TR/html5/interactive-elements.html#context-menus"
+      },
+      {
+        "name": "thewebrocks.com Demo",
+        "href": "http://thewebrocks.com/demos/context-menu/"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "jQuery-contextMenu",
+        "authors": [
+          "Rodney Rehm"
+        ],
+        "href": "https://github.com/medialize/jQuery-contextMenu",
+        "licenses": [
+          "MIT",
+          "GPL3"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for custom context menus.</p>\n",
     "deps": [
       "docElement"
     ],
     "path": "./feature-detects/contextmenu.js",
     "amdPath": "test/contextmenu",
-    "name": "test/contextmenu",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "contextmenu",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Cookies",
+    "property": "cookies",
+    "tags": [
+      "storage"
+    ],
+    "authors": [
+      "tauren"
+    ],
+    "doc": "<p>Detects whether cookie support is enabled.</p>\n",
     "deps": [],
     "path": "./feature-detects/cookies.js",
     "amdPath": "test/cookies",
-    "name": "test/cookies",
     "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "cookies",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Cross-Origin Resource Sharing",
+    "property": "cors",
+    "caniuse": "cors",
+    "authors": [
+      "Theodoor van Donge"
+    ],
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "pmxdr",
+        "authors": [
+          "Eli Grey"
+        ],
+        "href": "https://github.com/eligrey/pmxdr",
+        "notes": [
+          "Implements a CORS-compliant cross-domain XMLHttpRequest with postMessage. Note that sites being requested must have a pmxdr host."
+        ],
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "postmessage-proxied-xhr",
+        "authors": [
+          "Atul Varma"
+        ],
+        "href": "https://github.com/toolness/postmessage-proxied-xhr"
+      },
+      {
+        "name": "flXHR",
+        "authors": [
+          "Kyle Simpson"
+        ],
+        "href": "https://github.com/flensed/flXHR",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for Cross-Origin Resource Sharing: method of performing XMLHttpRequests across domains.</p>\n",
     "deps": [],
     "path": "./feature-detects/cors.js",
     "amdPath": "test/cors",
-    "name": "test/cors",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "cors",
     "tags": [],
-    "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Custom protocol handler",
+    "property": "customprotocolhandler",
+    "authors": [
+      "Ben Schwarz"
+    ],
+    "notes": [
+      {
+        "name": "WHATWG overview",
+        "href": "http://developers.whatwg.org/timers.html#custom-handlers"
+      },
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/Web/API/navigator.registerProtocolHandler"
+      }
+    ],
+    "warnings": [],
+    "polyfills": [],
+    "doc": "<p>Detects support for the <code>window.registerProtocolHandler()</code> API to allow web sites to register themselves as possible handlers for particular protocols.</p>\n",
     "deps": [],
     "path": "./feature-detects/custom-protocol-handler.js",
     "amdPath": "test/custom-protocol-handler",
-    "name": "test/custom-protocol-handler",
-    "polyfills": [],
     "async": false,
-    "notes": [],
-    "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "customprotocolhandler",
     "tags": [],
-    "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Dart",
+    "property": "dart",
+    "authors": [
+      "Theodoor van Donge"
+    ],
+    "notes": [
+      {
+        "name": "Language website",
+        "href": "http://www.dartlang.org/"
+      }
+    ],
+    "doc": "<p>Detects native support for the Dart programming language.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/dart.js",
     "amdPath": "test/dart",
-    "name": "test/dart",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "dart",
     "tags": [],
-    "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "DataView",
+    "property": "dataview",
+    "authors": [
+      "Addy Osmani"
+    ],
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en/JavaScript_typed_arrays/DataView"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "jDataView",
+        "authors": [
+          "Christopher Chedeau"
+        ],
+        "href": "https://github.com/vjeux/jDataView/"
+      }
+    ],
+    "doc": "<p>Detects support for the DataView interface for reading data from an ArrayBuffer as part of the Typed Array spec.</p>\n",
     "deps": [],
     "path": "./feature-detects/dataview-api.js",
     "amdPath": "test/dataview-api",
-    "name": "test/dataview-api",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "dataview",
     "tags": [],
-    "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Drag & Drop",
+    "property": "draganddrop",
+    "caniuse": "dragndrop",
+    "notes": [
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/TR/2010/WD-html5-20101019/dnd.html"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "dropfile",
+        "authors": [
+          "Andrew Dodson"
+        ],
+        "href": "https://github.com/MrSwitch/dropfile",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "mOxie",
+        "authors": [
+          "Moxiecode"
+        ],
+        "href": "https://github.com/moxiecode/moxie",
+        "licenses": [
+          "GPL2"
+        ]
+      },
+      {
+        "name": "FileAPI",
+        "authors": [
+          "Konstantin Lebedev",
+          "Demidov Vladimir"
+        ],
+        "href": "https://github.com/mailru/FileAPI",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for native drag &amp; drop of elements.</p>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/draganddrop.js",
     "amdPath": "test/draganddrop",
-    "name": "test/draganddrop",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "draganddrop",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Emoji",
+    "property": "emoji",
+    "doc": "<p>Detects support for emoji character sets.</p>\n",
     "deps": [
       "createElement",
       "test/canvastext"
     ],
     "path": "./feature-detects/emoji.js",
     "amdPath": "test/emoji",
-    "name": "test/emoji",
     "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "emoji",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "EXIF Orientation",
+    "property": "exiforientation",
+    "tags": [
+      "image"
+    ],
+    "async": true,
+    "authors": [
+      "Paul Sayre"
+    ],
+    "notes": [
+      {
+        "name": "Article by Dave Perrett",
+        "href": "http://recursive-design.com/blog/2012/07/28/exif-orientation-handling-is-a-ghetto/"
+      },
+      {
+        "name": "Article by Calvin Hass",
+        "href": "http://www.impulseadventure.com/photo/exif-orientation.html"
+      }
+    ],
+    "doc": "<p>Detects support for EXIF Orientation in JPEG images.</p>\n<p>iOS looks at the EXIF Orientation flag in JPEGs and rotates the image accordingly. Most desktop browsers just ignore this data.</p>\n",
     "deps": [
       "addTest"
     ],
     "path": "./feature-detects/exif-orientation.js",
     "amdPath": "test/exif-orientation",
-    "name": "test/exif-orientation",
     "polyfills": [],
-    "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "exiforientation",
     "knownBugs": []
   },
   {
+    "name": "Fullscreen API",
+    "property": "fullscreen",
+    "caniuse": "fullscreen",
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en/API/Fullscreen"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "screenfull.js",
+        "authors": [
+          "Sindre Sorhus"
+        ],
+        "href": "https://github.com/sindresorhus/screenfull.js",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
     "doc": null,
     "deps": [
       "domPrefixes",
@@ -307,121 +608,322 @@
     ],
     "path": "./feature-detects/fullscreen-api.js",
     "amdPath": "test/fullscreen-api",
-    "name": "test/fullscreen-api",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "fullscreen",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "GamePad API",
+    "property": "gamepads",
+    "authors": [
+      "Eric Bidelman"
+    ],
+    "tags": [
+      "media"
+    ],
+    "notes": [
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/TR/gamepad/"
+      },
+      {
+        "name": "HTML5 Rocks tutorial",
+        "href": "http://www.html5rocks.com/en/tutorials/doodles/gamepad/#toc-featuredetect"
+      }
+    ],
+    "warnings": [],
+    "polyfills": [],
+    "doc": "<p>Detects support for the Gamepad API, for access to gamepads and controllers.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/gamepad.js",
     "amdPath": "test/gamepad",
-    "name": "test/gamepad",
-    "polyfills": [],
     "async": false,
-    "notes": [],
-    "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "gamepads",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Geolocation API",
+    "property": "geolocation",
+    "caniuse": "geolocation",
+    "tags": [
+      "media"
+    ],
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/WebAPI/Using_geolocation"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "polyfill",
+        "authors": [
+          "Joshua Bell"
+        ],
+        "href": "https://github.com/inexorabletash/polyfill",
+        "licenses": [
+          "various"
+        ]
+      },
+      {
+        "name": "Webshims",
+        "authors": [
+          "Alexander Farkas"
+        ],
+        "href": "http://afarkas.github.io/webshim/demos/",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "Geolocation Shim",
+        "authors": [
+          "Paul Irish"
+        ],
+        "href": "https://gist.github.com/paulirish/366184",
+        "notes": [
+          "Uses Google ClientLocation API as a fallback"
+        ]
+      },
+      {
+        "name": "geo-location-javascript",
+        "authors": [
+          "whoisstan"
+        ],
+        "href": "https://code.google.com/p/geo-location-javascript/",
+        "notes": [
+          "Mobile-centric: uses non-standard Blackberry and WebOS tricks"
+        ],
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "Geolocation-API-Polyfill",
+        "authors": [
+          "Manuel Bieh"
+        ],
+        "href": "https://github.com/manuelbieh/Geolocation-API-Polyfill",
+        "licenses": [
+          "LGPL"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the Geolocation API for users to provide their location to web applications.</p>\n",
     "deps": [],
     "path": "./feature-detects/geolocation.js",
     "amdPath": "test/geolocation",
-    "name": "test/geolocation",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "geolocation",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Hashchange event",
+    "property": "hashchange",
+    "caniuse": "hashchange",
+    "tags": [
+      "history"
+    ],
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/Web/API/window.onhashchange"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "jQuery hashchange event",
+        "authors": [
+          "Ben Alman"
+        ],
+        "href": "http://benalman.com/projects/jquery-hashchange-plugin/",
+        "licenses": [
+          "MIT",
+          "GPL2"
+        ]
+      },
+      {
+        "name": "HistoryManager Mootools Plugin",
+        "authors": [
+          "Arieh Glazer"
+        ],
+        "href": "http://mootools.net/forge/p/historymanager/",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "jQuery Ajaxy",
+        "authors": [
+          "Benjamin Lupton"
+        ],
+        "href": "https://github.com/balupton/jquery-ajaxy",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "Hasher",
+        "authors": [
+          "Miller Medeiros"
+        ],
+        "href": "https://github.com/millermedeiros/hasher/",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "sHistory",
+        "authors": [
+          "Andrew Udvare"
+        ],
+        "href": "https://github.com/tatsh/sHistory",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the <code>hashchange</code> event, fired when the current location fragment changes.</p>\n",
     "deps": [
       "hasEvent"
     ],
     "path": "./feature-detects/hashchange.js",
     "amdPath": "test/hashchange",
-    "name": "test/hashchange",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "hashchange",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "History API",
+    "property": "history",
+    "caniuse": "history",
+    "tags": [
+      "history"
+    ],
+    "authors": [
+      "Hay Kranen",
+      "Alexander Farkas"
+    ],
+    "notes": [
+      {
+        "name": "W3C Spec",
+        "href": "http://www.w3.org/TR/html51/browsers.html#the-history-interface"
+      },
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/Web/API/window.history"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "History.js",
+        "authors": [
+          "Benjamin Lupton"
+        ],
+        "href": "https://github.com/browserstate/history.js",
+        "licenses": [
+          "BSD"
+        ]
+      },
+      {
+        "name": "HTML5 History API",
+        "authors": [
+          "Dmitrii Pakhtinov"
+        ],
+        "href": "https://github.com/devote/HTML5-History-API",
+        "licenses": [
+          "GPL3",
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the History API for manipulating the browser session history.</p>\n",
     "deps": [],
     "path": "./feature-detects/history.js",
     "amdPath": "test/history",
-    "name": "test/history",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "history",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "IE8 compat mode",
+    "property": "ie8compat",
+    "authors": [
+      "Erich Ocean"
+    ],
+    "doc": "<p>Detects whether or not the current browser is IE8 in compatibility mode (i.e. acting as IE7).</p>\n",
     "deps": [],
     "path": "./feature-detects/ie8compat.js",
     "amdPath": "test/ie8compat",
-    "name": "test/ie8compat",
     "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "ie8compat",
     "tags": [],
-    "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "IndexedDB",
+    "property": "indexeddb",
+    "caniuse": "indexeddb",
+    "tags": [
+      "storage"
+    ],
+    "polyfills": [
+      {
+        "name": "IndexedDB",
+        "authors": [
+          "Parashuram"
+        ],
+        "href": "http://nparashuram.com/IndexedDBShim/",
+        "licenses": [
+          "GPL2",
+          "BSD"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the IndexedDB client-side storage API (final spec).</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/indexedDB.js",
     "amdPath": "test/indexedDB",
-    "name": "test/indexedDB",
-    "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "indexeddb",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Input attributes",
+    "property": "input",
+    "tags": [
+      "forms"
+    ],
+    "authors": [
+      "Mike Taylor"
+    ],
+    "notes": [
+      {
+        "name": "WHATWG spec",
+        "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary"
+      }
+    ],
+    "doc": "<p>Detects support for HTML5 <code>&lt;input&gt;</code> element attributes and exposes Boolean subproperties with the results:</p>\n<pre><code class=\"lang-javascript\">Modernizr.input.autocomplete\nModernizr.input.autofocus\nModernizr.input.list\nModernizr.input.max\nModernizr.input.min\nModernizr.input.multiple\nModernizr.input.pattern\nModernizr.input.placeholder\nModernizr.input.required\nModernizr.input.step</code></pre>\n",
     "deps": [
       "createElement",
       "attrs",
@@ -430,19 +932,153 @@
     ],
     "path": "./feature-detects/input.js",
     "amdPath": "test/input",
-    "name": "test/input",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "input",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Form input types",
+    "property": "inputtypes",
+    "caniuse": "forms",
+    "tags": [
+      "forms"
+    ],
+    "authors": [
+      "Mike Taylor"
+    ],
+    "polyfills": [
+      {
+        "name": "jQuery Tools",
+        "href": "http://jquerytools.org",
+        "licenses": [
+          "public domain"
+        ]
+      },
+      {
+        "name": "Webshims",
+        "authors": [
+          "Alexander Farkas"
+        ],
+        "href": "http://afarkas.github.io/webshim/demos/",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "H5F",
+        "authors": [
+          "Ryan Seddon"
+        ],
+        "href": "https://github.com/ryanseddon/H5F",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "Web Forms 2.0",
+        "authors": [
+          "Weston Ruter"
+        ],
+        "href": "https://github.com/westonruter/webforms2",
+        "licenses": [
+          "MIT",
+          "GPL2"
+        ]
+      },
+      {
+        "name": "NWX Forms",
+        "authors": [
+          "Diego Perini"
+        ],
+        "href": "https://github.com/dperini/nwxforms",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "fd-slider",
+        "authors": [
+          "Brian McAllister"
+        ],
+        "href": "https://github.com/freqdec/fd-slider",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "html5slider",
+        "authors": [
+          "Frank Yan"
+        ],
+        "href": "https://github.com/fryn/html5slider",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "YUI Gallery HTML5 Forms",
+        "authors": [
+          "Matt Snider"
+        ],
+        "href": "http://yuilibrary.com/gallery/show/html5-forms",
+        "licenses": [
+          "BSD"
+        ]
+      },
+      {
+        "name": "JSColor",
+        "authors": [
+          "Johannes Jörg Schmidt"
+        ],
+        "href": "https://github.com/jo/JSColor",
+        "licenses": [
+          "LGPL"
+        ]
+      },
+      {
+        "name": "HTML5 Form Shim",
+        "authors": [
+          "Dmitry Sheiko"
+        ],
+        "href": "https://github.com/dsheiko/HTML5-Form-Shim",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "jQuery form shim",
+        "authors": [
+          "Andrew Dodson"
+        ],
+        "href": "http://adodson.com/jquery.form.js/"
+      },
+      {
+        "name": "selectedOptions.js",
+        "authors": [
+          "Brett Zamir"
+        ],
+        "href": "https://gist.github.com/brettz9/4212217",
+        "licenses": [
+          "MIT",
+          "GPL",
+          "public domain"
+        ]
+      },
+      {
+        "name": "formvalidation.js",
+        "authors": [
+          "Maksim Chemerisuk"
+        ],
+        "href": "https://github.com/chemerisuk/formvalidation.js",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for HTML5 form input types and exposes Boolean subproperties with the results:</p>\n<pre><code class=\"lang-javascript\">Modernizr.inputtypes.color\nModernizr.inputtypes.date\nModernizr.inputtypes.datetime\nModernizr.inputtypes[&#39;datetime-local&#39;]\nModernizr.inputtypes.email\nModernizr.inputtypes.month\nModernizr.inputtypes.number\nModernizr.inputtypes.range\nModernizr.inputtypes.search\nModernizr.inputtypes.tel\nModernizr.inputtypes.time\nModernizr.inputtypes.url\nModernizr.inputtypes.week</code></pre>\n",
     "deps": [
       "inputElem",
       "docElement",
@@ -452,272 +1088,579 @@
     ],
     "path": "./feature-detects/inputtypes.js",
     "amdPath": "test/inputtypes",
-    "name": "test/inputtypes",
-    "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "inputtypes",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "JSON",
+    "property": "json",
+    "caniuse": "json",
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "http://developer.mozilla.org/en/JSON"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "JSON2",
+        "authors": [
+          "Douglas Crockford"
+        ],
+        "href": "https://github.com/douglascrockford/JSON-js",
+        "licenses": [
+          "public domain"
+        ]
+      }
+    ],
+    "doc": "<p>Detects native support for JSON handling functions.</p>\n",
     "deps": [],
     "path": "./feature-detects/json.js",
     "amdPath": "test/json",
-    "name": "test/json",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "json",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Reverse Ordered Lists",
+    "property": "olreversed",
+    "notes": [
+      {
+        "name": "Impressive Webs article",
+        "href": "http://impressivewebs.com/reverse-ordered-lists-html5"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "HTML5 Reverse Ordered Lists",
+        "authors": [
+          "Louis Lazaris",
+          "Remy Sharp"
+        ],
+        "href": "https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists"
+      }
+    ],
+    "doc": "<p>Detects support for the <code>reversed</code> attribute on the <code>&lt;ol&gt;</code> element.</p>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/lists-reversed.js",
     "amdPath": "test/lists-reversed",
-    "name": "test/lists-reversed",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "olreversed",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "MathML",
+    "property": "mathml",
+    "caniuse": "mathml",
+    "authors": [
+      "Addy Osmani",
+      "Davide P. Cervone",
+      "David Carlisle"
+    ],
+    "notes": [
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/Math/"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "MathJax",
+        "authors": [
+          "Davide P. Cervone"
+        ],
+        "href": "http://www.mathjax.org/",
+        "licenses": [
+          "Apache2"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for MathML, for mathematic equations in web pages.</p>\n",
     "deps": [
       "createElement",
       "addTest"
     ],
     "path": "./feature-detects/mathml.js",
     "amdPath": "test/mathml",
-    "name": "test/mathml",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "mathml",
     "tags": [],
-    "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Notifications",
+    "property": "notification",
+    "caniuse": "notifications",
+    "authors": [
+      "Theodoor van Donge"
+    ],
+    "notes": [
+      {
+        "name": "HTML5 Rocks tutorial",
+        "href": "http://www.html5rocks.com/en/tutorials/notifications/quick/"
+      },
+      {
+        "name": "W3C spec",
+        "href": "http://dev.w3.org/2006/webapi/WebNotifications/publish/Notifications.html#idl-if-Notification"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "notification.js",
+        "authors": [
+          "Andrew Dodson"
+        ],
+        "href": "http://adodson.com/notification.js/",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the Notifications API, for notifying the user of events regardless of which tab has focus.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/notification.js",
     "amdPath": "test/notification",
-    "name": "test/notification",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "notification",
     "tags": [],
-    "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Page Visibility API",
+    "property": "pagevisibility",
+    "caniuse": "pagevisibility",
+    "tags": [
+      "performance"
+    ],
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/DOM/Using_the_Page_Visibility_API"
+      },
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/TR/2011/WD-page-visibility-20110602/"
+      },
+      {
+        "name": "HTML5 Rocks tutorial",
+        "href": "http://www.html5rocks.com/en/tutorials/pagevisibility/intro/"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "Visibility.js",
+        "authors": [
+          "Andrey Sitnik"
+        ],
+        "href": "https://github.com/ai/visibility.js",
+        "licenses": [
+          "GPL3"
+        ]
+      },
+      {
+        "name": "visibly.js",
+        "authors": [
+          "Addy Osmani"
+        ],
+        "href": "https://github.com/addyosmani/visibly.js"
+      },
+      {
+        "name": "Page Visibility shim for jQuery",
+        "authors": [
+          "Mathias Bynens"
+        ],
+        "href": "https://github.com/mathiasbynens/jquery-visibility",
+        "licenses": [
+          "MIT",
+          "GPL"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the Page Visibility API, which can be used to disable unnecessary actions and otherwise improve user experience.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/pagevisibility-api.js",
     "amdPath": "test/pagevisibility-api",
-    "name": "test/pagevisibility-api",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "pagevisibility",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Navigation Timing API",
+    "property": "performance",
+    "caniuse": "nav-timing",
+    "tags": [
+      "performance"
+    ],
+    "authors": [
+      "Scott Murphy (@uxder)"
+    ],
+    "notes": [
+      {
+        "name": "W3C Spec",
+        "href": "http://www.w3.org/TR/navigation-timing/"
+      },
+      {
+        "name": "HTML5 Rocks article",
+        "href": "http://www.html5rocks.com/en/tutorials/webperformance/basics/"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "perf.now() polyfill",
+        "authors": [
+          "Paul Irish"
+        ],
+        "href": "https://gist.github.com/paulirish/5438650"
+      }
+    ],
+    "doc": "<p>Detects support for the Navigation Timing API, for measuring browser and connection performance.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/performance.js",
     "amdPath": "test/performance",
-    "name": "test/performance",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "performance",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "DOM Pointer Events API",
+    "property": "pointerevents",
+    "tags": [
+      "input"
+    ],
+    "authors": [
+      "Stu Cox"
+    ],
+    "notes": [
+      "This property name used to refer to the CSS `pointer-events` property, which is now named `csspointerevents`.",
+      {
+        "name": "W3C spec submission",
+        "href": "http://www.w3.org/Submission/pointer-events/"
+      }
+    ],
+    "warnings": [
+      "This property name now refers to W3C DOM PointerEvents: https://github.com/Modernizr/Modernizr/issues/548#issuecomment-12812099"
+    ],
+    "polyfills": [
+      {
+        "name": "Hand.js",
+        "authors": [
+          "DeltaKosh"
+        ],
+        "href": "http://handjs.codeplex.com/",
+        "notes": [
+          "Implements the Pointer Events API"
+        ],
+        "licenses": [
+          "Apache2"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the DOM Pointer Events API, which provides a unified event interface for pointing input devices, as implemented in IE10+.</p>\n",
     "deps": [
       "domPrefixes",
       "hasEvent"
     ],
     "path": "./feature-detects/pointerevents.js",
     "amdPath": "test/pointerevents",
-    "name": "test/pointerevents",
-    "polyfills": [],
     "async": false,
-    "notes": [],
-    "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "pointerevents",
     "knownBugs": []
   },
   {
+    "name": "Pointer Lock API",
+    "property": "pointerlock",
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/API/Pointer_Lock_API"
+      }
+    ],
     "doc": null,
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/pointerlock-api.js",
     "amdPath": "test/pointerlock-api",
-    "name": "test/pointerlock-api",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "pointerlock",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "postMessage",
+    "property": "postmessage",
+    "caniuse": "x-doc-messaging",
+    "notes": [
+      {
+        "name": "W3C Spec",
+        "href": "http://www.w3.org/TR/html5/comms.html#posting-messages"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "easyXDM",
+        "authors": [
+          "Sean Kinsey"
+        ],
+        "href": "http://easyxdm.net/wp/",
+        "notes": [
+          "Implements XDM and RPC in most browsers since IE6. Also ships with an endpoint for exposing ajax across the domain boundary."
+        ],
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "postMessage jquery plugin",
+        "authors": [
+          "Ben Alman"
+        ],
+        "href": "http://benalman.com/projects/jquery-postmessage-plugin/",
+        "licenses": [
+          "MIT",
+          "GPL2"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the <code>window.postMessage</code> protocol for cross-document messaging.</p>\n",
     "deps": [],
     "path": "./feature-detects/postmessage.js",
     "amdPath": "test/postmessage",
-    "name": "test/postmessage",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
+    "cssclass": "postmessage",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Quota Storage Management API",
+    "property": "quotamanagement",
+    "tags": [
+      "storage"
+    ],
+    "notes": [
+      {
+        "name": "W3C Spec",
+        "href": "http://www.w3.org/TR/quota-api/"
+      }
+    ],
+    "doc": "",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/quota-management-api.js",
     "amdPath": "test/quota-management-api",
-    "name": "test/quota-management-api",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "quotamanagement",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "requestAnimationFrame",
+    "property": "requestanimationframe",
+    "aliases": [
+      "raf"
+    ],
+    "caniuse": "requestanimationframe",
+    "tags": [
+      "animation"
+    ],
+    "authors": [
+      "Addy Osmani"
+    ],
+    "notes": [
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/TR/animation-timing/"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "requestAnimationFrame polyfill",
+        "authors": [
+          "Erik Möller"
+        ],
+        "href": "http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating"
+      }
+    ],
+    "doc": "<p>Detects support for the <code>window.requestAnimationFrame</code> API, for offloading animation repainting to the browser for optimized performance.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/requestanimationframe.js",
     "amdPath": "test/requestanimationframe",
-    "name": "test/requestanimationframe",
-    "polyfills": [],
+    "async": false,
+    "warnings": [],
+    "cssclass": "requestanimationframe",
+    "knownBugs": []
+  },
+  {
+    "name": "SVG",
+    "property": "svg",
+    "caniuse": "svg",
+    "tags": [
+      "svg"
+    ],
+    "authors": [
+      "Erik Dahlstrom"
+    ],
+    "polyfills": [
+      {
+        "name": "SVG Web",
+        "authors": [
+          "Rick Masters",
+          "Brad Neuberg",
+          "James Hight"
+        ],
+        "href": "https://code.google.com/p/svgweb/",
+        "licenses": [
+          "Apache2"
+        ]
+      },
+      {
+        "name": "Raphaël",
+        "authors": [
+          "Dmitry Baranovsky"
+        ],
+        "href": "http://raphaeljs.com/",
+        "notes": [
+          "Abstracted API. adds features. fallback for IE via VML"
+        ],
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "Ample SDK",
+        "authors": [
+          "Sergey Ilinsky"
+        ],
+        "href": "http://www.amplesdk.com/examples/svg/",
+        "licenses": [
+          "MIT",
+          "GPL2"
+        ]
+      },
+      {
+        "name": "canvg",
+        "authors": [
+          "Gabe Lerner"
+        ],
+        "href": "http://code.google.com/p/canvg/",
+        "notes": [
+          "Writes SVG to canvas. Good for Android"
+        ],
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "SVG Boilerplate",
+        "authors": [
+          "Robin Berjon"
+        ],
+        "href": "https://github.com/darobin/svgboilerplate",
+        "notes": [
+          "Alpha and still buggy, but handle multiple concurrent SVG shims together"
+        ],
+        "licenses": [
+          "public domain"
+        ]
+      },
+      {
+        "name": "SIE SVG library",
+        "authors": [
+          "Hiroki Dehara"
+        ],
+        "href": "http://sie.sourceforge.jp/",
+        "notes": [
+          "Fallback to VML for oldIE"
+        ],
+        "licenses": [
+          "Mozilla1.1",
+          "GPL2",
+          "LGPL2.1"
+        ]
+      },
+      {
+        "name": "Dojo GFX",
+        "authors": [
+          "Eugene Lazutkin",
+          "Kun Xi",
+          "Chris Mitchell"
+        ],
+        "href": "http://docs.dojocampus.org/dojox/gfx/",
+        "notes": [
+          "Fallback via VML, Canvas, Silverlight and Flash"
+        ],
+        "licenses": [
+          "BSD",
+          "AFL"
+        ]
+      },
+      {
+        "name": "fabric.js",
+        "authors": [
+          "Juriy Zaytsev (@kangax)"
+        ],
+        "href": "https://github.com/kangax/fabric.js",
+        "notes": "Can render SVG via canvas",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for SVG in <code>&lt;embed&gt;</code> or <code>&lt;object&gt;</code> elements.</p>\n",
+    "deps": [],
+    "path": "./feature-detects/svg.js",
+    "amdPath": "test/svg",
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "svg",
     "knownBugs": []
   },
   {
     "doc": null,
-    "deps": [],
-    "path": "./feature-detects/svg.js",
-    "amdPath": "test/svg",
-    "name": "test/svg",
-    "polyfills": [],
-    "async": false,
-    "notes": [],
-    "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
-    "knownBugs": []
-  },
-  {
-    "name": "Touch Events",
-    "property": "touchevents",
-    "caniuse": "touch",
-    "tags": [
-      "media",
-      "attribute"
-    ],
-    "notes": [
-      {
-        "name": "Touch Events spec",
-        "href": "http://www.w3.org/TR/2013/WD-touch-events-20130124/"
-      },
-      {
-        "name": "Touch Events test page",
-        "href": "http://modernizr.github.com/Modernizr/touch.html"
-      }
-    ],
-    "warnings": [
-      "Indicates if the browser supports the Touch Events spec, which does not necessarily reflect a touchscreen device"
-    ],
-    "knownBugs": [
-      "False-positive on some configurations of Nokia N900",
-      "False-positive on some BlackBerry 6.0 builds – https://github.com/Modernizr/Modernizr/issues/372#issuecomment-3112695"
-    ],
-    "doc": "<p>The <code>Modernizr.touchevents</code> test only indicates if the browser supports touch events, which does not necessarily reflect a touchscreen device, as evidenced by tablets running Windows 7 or, alas, the Palm Pre / WebOS (touch) phones.</p>\n<p>We also test for Firefox 4 Multitouch Support.</p>\n<p>Chrome (desktop) used to lie about its support on this, but that has since been rectified: <a href=\"http://crbug.com/36415\">http://crbug.com/36415</a></p>\n",
     "deps": [
       "prefixes",
       "testStyles"
     ],
     "path": "./feature-detects/touchevents.js",
     "amdPath": "test/touchevents",
-    "polyfills": [],
-    "async": false,
-    "cssclass": "touchevents",
-    "authors": []
-  },
-  {
-    "doc": null,
-    "deps": [],
-    "path": "./feature-detects/typed-arrays.js",
-    "amdPath": "test/typed-arrays",
-    "name": "test/typed-arrays",
+    "name": "test/touchevents",
     "polyfills": [],
     "async": false,
     "notes": [],
@@ -729,109 +1672,297 @@
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Typed arrays",
+    "property": "typedarrays",
+    "caniuse": "typedarrays",
+    "tags": [
+      "js"
+    ],
+    "authors": [
+      "Stanley Stuart (@fivetanley)"
+    ],
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays"
+      },
+      {
+        "name": "Kronos spec",
+        "href": "http://www.khronos.org/registry/typedarray/specs/latest/"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "polyfill",
+        "authors": [
+          "Joshua Bell"
+        ],
+        "href": "https://github.com/inexorabletash/polyfill",
+        "licenses": [
+          "various"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for native binary data manipulation via Typed Arrays in JavaScript.</p>\n<p>Does not check for DataView support; use <code>Modernizr.dataview</code> for that.</p>\n",
+    "deps": [],
+    "path": "./feature-detects/typed-arrays.js",
+    "amdPath": "test/typed-arrays",
+    "async": false,
+    "warnings": [],
+    "cssclass": "typedarrays",
+    "knownBugs": []
+  },
+  {
+    "name": "Unicode characters",
+    "property": "unicode",
+    "tags": [
+      "encoding"
+    ],
+    "warnings": [
+      "positive Unicode support doesn't mean you can use it inside <title>, this seams more related to OS & Language packs"
+    ],
+    "doc": "<p>Detects if unicode characters are supported in the current document.</p>\n",
     "deps": [
       "createElement",
       "testStyles"
     ],
     "path": "./feature-detects/unicode.js",
     "amdPath": "test/unicode",
-    "name": "test/unicode",
     "polyfills": [],
     "async": false,
     "notes": [],
-    "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "unicode",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "IE User Data API",
+    "property": "userdata",
+    "tags": [
+      "storage"
+    ],
+    "authors": [
+      "@stereobooster"
+    ],
+    "notes": [
+      {
+        "name": "MSDN Documentation",
+        "href": "http://msdn.microsoft.com/en-us/library/ms531424(v=vs.85).aspx"
+      }
+    ],
+    "doc": "<p>Detects support for IE userData for persisting data, an API similar to localStorage but supported since IE5.</p>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/userdata.js",
     "amdPath": "test/userdata",
-    "name": "test/userdata",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "userdata",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Vibration API",
+    "property": "vibrate",
+    "notes": [
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en/DOM/window.navigator.mozVibrate"
+      },
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/TR/vibration/"
+      }
+    ],
+    "doc": "<p>Detects support for the API that provides access to the vibration mechanism of the hosting device, to provide tactile feedback.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/vibration.js",
     "amdPath": "test/vibration",
-    "name": "test/vibration",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "vibrate",
     "tags": [],
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "HTML5 Video",
+    "property": "video",
+    "caniuse": "video",
+    "tags": [
+      "html5"
+    ],
+    "knownBugs": [
+      "Without QuickTime, `Modernizr.video.h264` will be `undefined`; http://github.com/Modernizr/Modernizr/issues/546"
+    ],
+    "polyfills": [
+      {
+        "name": "html5media",
+        "authors": [
+          "Dave Hall"
+        ],
+        "href": "https://github.com/etianen/html5media",
+        "licenses": [
+          "GPL3"
+        ]
+      },
+      {
+        "name": "MediaElement.js",
+        "authors": [
+          "John Dyer"
+        ],
+        "href": "http://mediaelementjs.com/",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "SublimeVideo",
+        "authors": "Jilion",
+        "href": "http://sublimevideo.net/",
+        "licenses": [
+          "proprietary"
+        ]
+      },
+      {
+        "name": "video.js",
+        "authors": [
+          "Steve Heffernan"
+        ],
+        "href": "http://videojs.com/",
+        "licenses": [
+          "Apache2"
+        ]
+      },
+      {
+        "name": "LeanBack Player",
+        "authors": [
+          "Kapelan Medien GmbH"
+        ],
+        "href": "http://www.leanbackplayer.com/",
+        "licenses": [
+          "GPL3"
+        ]
+      },
+      {
+        "name": "Video For Everybody",
+        "authors": [
+          "Kroc Camen"
+        ],
+        "href": "http://camendesign.com/code/video_for_everybody",
+        "licenses": [
+          "public domain"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the video element, as well as testing what types of content it supports.</p>\n<p>Subproperties are provided to describe support for <code>ogg</code>, <code>h264</code> and <code>webm</code> formats, e.g.:</p>\n<pre><code class=\"lang-javascript\">Modernizr.video         // true\nModernizr.video.ogg     // &#39;probably&#39;</code></pre>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/video.js",
     "amdPath": "test/video",
-    "name": "test/video",
-    "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
-    "knownBugs": []
+    "cssclass": "video",
+    "authors": []
   },
   {
-    "doc": null,
+    "name": "Web Intents",
+    "property": "webintents",
+    "authors": [
+      "Eric Bidelman"
+    ],
+    "notes": [
+      {
+        "name": "Web Intents project site",
+        "href": "http://webintents.org/"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "Web Intents JavaScript Shim",
+        "authors": [
+          "Paul Kinlan"
+        ],
+        "href": "http://webintents.org/#javascriptshim",
+        "licenses": [
+          "Apache2"
+        ]
+      }
+    ],
+    "doc": "<p>Detects native support for the Web Intents APIs for service discovery and inter-application communication.</p>\n<p>Chrome added support for this in v19, but <a href=\"http://lists.w3.org/Archives/Public/public-web-intents/2012Nov/0000.html\">removed it again in v24</a> because of &quot;a number of areas for\ndevelopment in both the API and specific user experience in Chrome&quot;. No other browsers currently support it, however a <a href=\"http://webintents.org/#javascriptshim\">JavaScript shim</a> is available.</p>\n",
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/web-intents.js",
     "amdPath": "test/web-intents",
-    "name": "test/web-intents",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
+    "cssclass": "webintents",
     "tags": [],
-    "authors": [],
     "knownBugs": []
   },
   {
+    "name": "WebGL",
+    "property": "webgl",
+    "caniuse": "webgl",
+    "tags": [
+      "webgl",
+      "graphics"
+    ],
+    "polyfills": [
+      {
+        "name": "jebgl",
+        "authors": [
+          "Martin Qvist"
+        ],
+        "href": "http://code.google.com/p/jebgl/",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "webgl-compat",
+        "authors": [
+          "Colin MacKenzie"
+        ],
+        "href": "https://github.com/sinisterchipmunk/webgl-compat"
+      },
+      {
+        "name": "cwebgl",
+        "authors": [
+          "Cimaron Shanahan"
+        ],
+        "href": "http://code.google.com/p/cwebgl/",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "IEWebGL",
+        "href": "http://iewebgl.com/",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
     "doc": null,
     "deps": [],
     "path": "./feature-detects/webgl.js",
     "amdPath": "test/webgl",
-    "name": "test/webgl",
-    "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "webgl",
     "authors": [],
     "knownBugs": []
   },
@@ -844,6 +1975,9 @@
       "Burak Yigit Kaya [BYK]"
     ],
     "caniuse": "websockets",
+    "tags": [
+      "html5"
+    ],
     "warnings": [
       "This test will reject any old version of WebSockets even if it is not prefixed such as in Safari 5.1"
     ],
@@ -853,14 +1987,89 @@
         "href": "http://www.w3.org/TR/websockets/#the-websocket-interface"
       }
     ],
-    "tags": [
-      "html5"
+    "polyfills": [
+      {
+        "name": "SockJS",
+        "authors": [
+          ""
+        ],
+        "href": "https://github.com/sockjs/sockjs-client",
+        "licenses": [
+          ""
+        ]
+      },
+      {
+        "name": "socket.io",
+        "authors": [
+          ""
+        ],
+        "href": "http://socket.io/",
+        "licenses": [
+          ""
+        ]
+      },
+      {
+        "name": "Kaazing WebSocket Gateway",
+        "href": "http://kaazing.com/products/kaazing-websocket-gateway.html",
+        "licenses": [
+          "proprietary"
+        ]
+      },
+      {
+        "name": "web-socket-js",
+        "authors": [
+          "Hiroshi Ichikawa"
+        ],
+        "href": "http://github.com/gimite/web-socket-js/",
+        "licenses": [
+          "BSD"
+        ]
+      },
+      {
+        "name": "atmosphere jQuery plugin",
+        "authors": [
+          "Jeanfrancois Arcand"
+        ],
+        "href": "http://jfarcand.wordpress.com/2010/06/15/using-atmospheres-jquery-plug-in-to-build-applicationsupporting-both-websocket-and-comet/",
+        "licenses": [
+          "Apache2"
+        ]
+      },
+      {
+        "name": "Graceful WebSocket jQuery plugin",
+        "authors": [
+          "David Lindkvist"
+        ],
+        "href": "https://github.com/ffdead/jquery-graceful-websocket",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "Portal",
+        "authors": [
+          "Donghwan Kim"
+        ],
+        "href": "https://github.com/flowersinthesand/portal",
+        "licenses": [
+          "Apache2"
+        ]
+      },
+      {
+        "name": "DataChannel",
+        "authors": [
+          "Jesús Leganés Combarro"
+        ],
+        "href": "https://github.com/piranna/DataChannel-polyfill",
+        "licenses": [
+          "GPL3"
+        ]
+      }
     ],
     "doc": null,
     "deps": [],
     "path": "./feature-detects/websockets.js",
     "amdPath": "test/websockets",
-    "polyfills": [],
     "async": false,
     "cssclass": "websockets",
     "knownBugs": []
@@ -3938,105 +5147,238 @@
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "script[async]",
+    "property": "scriptasync",
+    "caniuse": "script-async",
+    "tags": [
+      "script"
+    ],
+    "authors": [
+      "Theodoor van Donge"
+    ],
+    "doc": "<p>Detects support for the <code>async</code> attribute on the <code>&lt;script&gt;</code> element.</p>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/script/async.js",
     "amdPath": "test/script/async",
-    "name": "test/script/async",
     "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "scriptasync",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "script[defer]",
+    "property": "scriptdefer",
+    "caniuse": "script-defer",
+    "tags": [
+      "script"
+    ],
+    "authors": [
+      "Theodoor van Donge"
+    ],
+    "warnings": [
+      "Browser implementation of the `defer` attribute vary: http://stackoverflow.com/questions/3952009/defer-attribute-chrome#answer-3982619"
+    ],
+    "doc": "<p>Detects support for the <code>defer</code> attribute on the <code>&lt;script&gt;</code> element.</p>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/script/defer.js",
     "amdPath": "test/script/defer",
-    "name": "test/script/defer",
     "polyfills": [],
     "async": false,
     "notes": [],
-    "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "scriptdefer",
     "knownBugs": []
   },
   {
+    "name": "Local Storage",
+    "property": "localstorage",
+    "caniuse": "namevalue-storage",
+    "tags": [
+      "storage"
+    ],
+    "knownBugs": [],
+    "notes": [],
+    "warnings": [],
+    "polyfills": [
+      {
+        "name": "polyfill",
+        "authors": [
+          "Joshua Bell"
+        ],
+        "href": "https://github.com/inexorabletash/polyfill",
+        "licenses": [
+          "various"
+        ]
+      },
+      {
+        "name": "CupCake.js",
+        "authors": [
+          "Rivindu Perera"
+        ],
+        "href": "http://www.rivindu.com/p/cupcakejs.html",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "Storage Polyfill",
+        "authors": [
+          "Remy Sharp"
+        ],
+        "href": "http://gist.github.com/350433",
+        "notes": [],
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "Amplify.js",
+        "authors": [
+          "appendTo"
+        ],
+        "href": "http://amplifyjs.com/",
+        "licenses": [
+          "MIT",
+          "GPL2"
+        ]
+      },
+      {
+        "name": "YUI3 CacheOffline",
+        "authors": [
+          "YUI Team"
+        ],
+        "href": "http://yuilibrary.com/yui/docs/cache/#offline",
+        "licenses": [
+          "BSD"
+        ]
+      },
+      {
+        "name": "Cross-browser TextStorage",
+        "authors": [
+          "sofish"
+        ],
+        "href": "https://gist.github.com/sofish/1221115"
+      }
+    ],
     "doc": null,
     "deps": [],
     "path": "./feature-detects/storage/localstorage.js",
     "amdPath": "test/storage/localstorage",
-    "name": "test/storage/localstorage",
-    "polyfills": [],
     "async": false,
-    "notes": [],
-    "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
-    "knownBugs": []
+    "cssclass": "localstorage",
+    "authors": []
   },
   {
+    "name": "Session Storage",
+    "property": "sessionstorage",
+    "tags": [
+      "storage"
+    ],
+    "polyfills": [
+      {
+        "name": "polyfill",
+        "authors": [
+          "Joshua Bell"
+        ],
+        "href": "https://github.com/inexorabletash/polyfill",
+        "licenses": [
+          "various"
+        ]
+      },
+      {
+        "name": "CupCake.js",
+        "authors": [
+          "Rivindu Perera"
+        ],
+        "href": "http://www.rivindu.com/p/cupcakejs.html",
+        "licenses": [
+          "MIT"
+        ]
+      },
+      {
+        "name": "sessionstorage",
+        "authors": [
+          "Andrea Giammarchi"
+        ],
+        "href": "http://gist.github.com/350433",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
     "doc": null,
     "deps": [],
     "path": "./feature-detects/storage/sessionstorage.js",
     "amdPath": "test/storage/sessionstorage",
-    "name": "test/storage/sessionstorage",
-    "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "sessionstorage",
     "authors": [],
     "knownBugs": []
   },
   {
+    "name": "Web SQL Database",
+    "property": "websqldatabase",
+    "caniuse": "sql-storage",
+    "tags": [
+      "storage"
+    ],
     "doc": null,
     "deps": [],
     "path": "./feature-detects/storage/websqldatabase.js",
     "amdPath": "test/storage/websqldatabase",
-    "name": "test/storage/websqldatabase",
     "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "websqldatabase",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "style[scoped]",
+    "property": "stylescoped",
+    "caniuse": "style-scoped",
+    "tags": [
+      "dom"
+    ],
+    "authors": [
+      "@alrra"
+    ],
+    "notes": [
+      {
+        "name": "W3C spec",
+        "href": "http://www.w3.org/TR/html5/the-style-element.html#attr-style-scoped"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "Scoped Styles",
+        "authors": [
+          "Simon Madine"
+        ],
+        "notes": [
+          "jQuery Plugin to enable the scoped attribute on style blocks so they only affect their parent element's children."
+        ],
+        "href": "http://github.com/thingsinjars/jQuery-Scoped-CSS-plugin"
+      }
+    ],
+    "doc": "<p>Support for the <code>scoped</code> attribute of the <code>&lt;style&gt;</code> element.</p>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/style/scoped.js",
     "amdPath": "test/style/scoped",
-    "name": "test/style/scoped",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "stylescoped",
     "knownBugs": []
   },
   {
@@ -4068,90 +5410,137 @@
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "SVG clip paths",
+    "property": "svgclippaths",
+    "tags": [
+      "svg"
+    ],
+    "notes": [
+      {
+        "name": "Demo",
+        "href": "http://srufaculty.sru.edu/david.dailey/svg/newstuff/clipPath4.svg"
+      }
+    ],
+    "doc": "<p>Detects support for clip paths in SVG (only, not on HTML content).</p>\n<p>See <a href=\"http://github.com/Modernizr/Modernizr/issues/213\">this discussion</a> regarding applying SVG clip paths to HTML content.</p>\n",
     "deps": [
       "toStringFn"
     ],
     "path": "./feature-detects/svg/clippaths.js",
     "amdPath": "test/svg/clippaths",
-    "name": "test/svg/clippaths",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "svgclippaths",
     "authors": [],
     "knownBugs": []
   },
   {
+    "name": "SVG filters",
+    "property": "svgfilters",
+    "caniuse": "svg-filters",
+    "tags": [
+      "svg"
+    ],
+    "authors": [
+      "Erik Dahlstrom"
+    ],
+    "notes": [
+      {
+        "name": "W3C Spec",
+        "href": "http://www.w3.org/TR/SVG11/filters.html"
+      }
+    ],
     "doc": null,
     "deps": [],
     "path": "./feature-detects/svg/filters.js",
     "amdPath": "test/svg/filters",
-    "name": "test/svg/filters",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "svgfilters",
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Inline SVG",
+    "property": "inlinesvg",
+    "caniuse": "svg-html5",
+    "tags": [
+      "svg"
+    ],
+    "notes": [
+      {
+        "name": "Test page",
+        "href": "http://paulirish.com/demo/inline-svg"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "inline SVG polyfill",
+        "authors": [
+          "Marc Stalfoort (@mstalfoort)"
+        ],
+        "href": "http://mstalfoort.posterous.com/inline-svg"
+      }
+    ],
+    "doc": "<p>Detects support for inline SVG in HTML (not within XHTML).</p>\n",
     "deps": [
       "createElement"
     ],
     "path": "./feature-detects/svg/inline.js",
     "amdPath": "test/svg/inline",
-    "name": "test/svg/inline",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "inlinesvg",
     "authors": [],
     "knownBugs": []
   },
   {
+    "name": "SVG SMIL animation",
+    "property": "smil",
+    "caniuse": "svg-smil",
+    "tags": [
+      "svg"
+    ],
     "doc": null,
     "deps": [
       "toStringFn"
     ],
     "path": "./feature-detects/svg/smil.js",
     "amdPath": "test/svg/smil",
-    "name": "test/svg/smil",
     "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "smil",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Data URI",
+    "property": "datauri",
+    "caniuse": "datauri",
+    "tags": [
+      "url"
+    ],
+    "async": true,
+    "notes": [
+      {
+        "name": "Wikipedia article",
+        "href": "http://en.wikipedia.org/wiki/Data_URI_scheme"
+      }
+    ],
+    "warnings": [
+      "Support in Internet Explorer 8 is limited to images and linked resources like CSS files, not HTML files"
+    ],
+    "doc": "<p>Detects support for data URIs. Provides a subproperty to report support for data URIs over 32kb in size:</p>\n<pre><code class=\"lang-javascript\">Modernizr.datauri           // true\nModernizr.datauri.over32kb  // false in IE8</code></pre>\n",
     "deps": [
       "addTest"
     ],
     "path": "./feature-detects/url/data-uri.js",
     "amdPath": "test/url/data-uri",
-    "name": "test/url/data-uri",
     "polyfills": [],
-    "async": false,
-    "notes": [],
-    "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "datauri",
     "authors": [],
     "knownBugs": []
   },
@@ -4231,157 +5620,278 @@
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "WebGL Extensions",
+    "property": "webglextensions",
+    "tags": [
+      "webgl",
+      "graphics"
+    ],
+    "authors": [
+      "Ilmari Heikkinen"
+    ],
+    "knownBugs": [],
+    "notes": [
+      {
+        "name": "Kronos extensions registry",
+        "href": "http://www.khronos.org/registry/webgl/extensions/"
+      }
+    ],
+    "doc": "<p>Detects support for OpenGL extensions in WebGL. It&#39;s <code>true</code> if the <a href=\"https://developer.mozilla.org/en-US/docs/Web/WebGL/Using_Extensions\">WebGL extensions API</a> is supported, then exposes the supported extensions as subproperties, e.g.:</p>\n<pre><code class=\"lang-javascript\">if (Modernizr.webglextensions) {\n  // WebGL extensions API supported\n}\nif (&#39;OES_vertex_array_object&#39; in Modernizr.webglextensions) {\n  // Vertex Array Objects extension supported\n}</code></pre>\n",
     "deps": [
       "createElement",
       "test/webgl"
     ],
     "path": "./feature-detects/webgl/extensions.js",
     "amdPath": "test/webgl/extensions",
-    "name": "test/webgl/extensions",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
-    "knownBugs": []
+    "cssclass": "webglextensions"
   },
   {
+    "name": "getUserMedia",
+    "property": "getusermedia",
+    "caniuse": "stream",
+    "tags": [
+      "webrtc"
+    ],
+    "authors": [
+      "Eric Bidelman"
+    ],
+    "notes": [
+      {
+        "name": "W3C Media Capture and Streams spec",
+        "href": "http://www.w3.org/TR/mediacapture-streams/"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "getUserMedia.js",
+        "authors": [
+          "Addy Osmani"
+        ],
+        "href": "https://github.com/addyosmani/getUserMedia.js",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    ],
     "doc": null,
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/webrtc/getusermedia.js",
     "amdPath": "test/webrtc/getusermedia",
-    "name": "test/webrtc/getusermedia",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "getusermedia",
     "knownBugs": []
   },
   {
+    "name": "RTC Peer Connection",
+    "property": "peerconnection",
+    "tags": [
+      "webrtc"
+    ],
+    "authors": [
+      "Ankur Oberoi"
+    ],
+    "notes": [
+      {
+        "name": "W3C Web RTC spec",
+        "href": "http://www.w3.org/TR/webrtc/"
+      }
+    ],
     "doc": null,
     "deps": [
       "prefixed"
     ],
     "path": "./feature-detects/webrtc/peerconnection.js",
     "amdPath": "test/webrtc/peerconnection",
-    "name": "test/webrtc/peerconnection",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
+    "cssclass": "peerconnection",
     "knownBugs": []
   },
   {
+    "name": "Binary WebSockets",
+    "property": "websocketsbinary",
+    "tags": [
+      "websockets"
+    ],
     "doc": null,
     "deps": [],
     "path": "./feature-detects/websockets/binary.js",
     "amdPath": "test/websockets/binary",
-    "name": "test/websockets/binary",
     "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "websocketsbinary",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Framed window",
+    "property": "framed",
+    "tags": [
+      "window"
+    ],
+    "doc": "<p>Tests if page is iframed.</p>\n",
     "deps": [],
     "path": "./feature-detects/window/framed.js",
     "amdPath": "test/window/framed",
-    "name": "test/window/framed",
     "polyfills": [],
     "async": false,
     "notes": [],
     "warnings": [],
     "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "framed",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Workers from Blob URIs",
+    "property": "blobworkers",
+    "caniuse": "blobworkers",
+    "tags": [
+      "performance",
+      "workers"
+    ],
+    "notes": [
+      {
+        "name": "W3C Reference",
+        "href": "http://www.w3.org/TR/workers/"
+      }
+    ],
+    "knownBugs": [
+      "This test may output garbage to console."
+    ],
+    "authors": [
+      "Jussi Kalliokoski"
+    ],
+    "async": true,
+    "doc": "<p>Detects support for creating Web Workers from Blob URIs.</p>\n",
     "deps": [
       "addTest"
     ],
     "path": "./feature-detects/workers/blobworkers.js",
     "amdPath": "test/workers/blobworkers",
-    "name": "test/workers/blobworkers",
     "polyfills": [],
-    "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
-    "knownBugs": []
+    "cssclass": "blobworkers"
   },
   {
-    "doc": null,
+    "name": "Workers from Data URIs",
+    "property": "dataworkers",
+    "caniuse": "dataworkers",
+    "tags": [
+      "performance",
+      "workers"
+    ],
+    "notes": [
+      {
+        "name": "W3C Reference",
+        "href": "http://www.w3.org/TR/workers/"
+      }
+    ],
+    "knownBugs": [
+      "This test may output garbage to console."
+    ],
+    "authors": [
+      "Jussi Kalliokoski"
+    ],
+    "async": true,
+    "doc": "<p>Detects support for creating Web Workers from Data URIs.</p>\n",
     "deps": [
       "addTest"
     ],
     "path": "./feature-detects/workers/dataworkers.js",
     "amdPath": "test/workers/dataworkers",
-    "name": "test/workers/dataworkers",
     "polyfills": [],
-    "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
-    "authors": [],
-    "knownBugs": []
+    "cssclass": "dataworkers"
   },
   {
-    "doc": null,
+    "name": "Shared Workers",
+    "property": "sharedworkers",
+    "caniuse": "sharedworkers",
+    "tags": [
+      "performance",
+      "workers"
+    ],
+    "notes": [
+      {
+        "name": "W3C Reference",
+        "href": "http://www.w3.org/TR/workers/"
+      }
+    ],
+    "doc": "<p>Detects support for the <code>SharedWorker</code> API from the Web Workers spec.</p>\n",
     "deps": [],
     "path": "./feature-detects/workers/sharedworkers.js",
     "amdPath": "test/workers/sharedworkers",
-    "name": "test/workers/sharedworkers",
     "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "sharedworkers",
     "authors": [],
     "knownBugs": []
   },
   {
-    "doc": null,
+    "name": "Web Workers",
+    "property": "webworkers",
+    "caniuse": "webworkers",
+    "tags": [
+      "performance",
+      "workers"
+    ],
+    "notes": [
+      {
+        "name": "W3C Reference",
+        "href": "http://www.w3.org/TR/workers/"
+      },
+      {
+        "name": "HTML5 Rocks article",
+        "href": "http://www.html5rocks.com/en/tutorials/workers/basics/"
+      },
+      {
+        "name": "MDN documentation",
+        "href": "https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers"
+      }
+    ],
+    "polyfills": [
+      {
+        "name": "fakeworker.js",
+        "authors": [
+          "Shumpei Shiraishi"
+        ],
+        "href": "https://code.google.com/p/fakeworker-js/",
+        "licenses": [
+          "Apache2"
+        ]
+      },
+      {
+        "name": "web worker api shim",
+        "authors": [
+          "Jonathan 'J5' Cook"
+        ],
+        "href": "https://code.google.com/p/html5-shims/",
+        "licenses": [
+          "Apache2"
+        ]
+      }
+    ],
+    "doc": "<p>Detects support for the basic <code>Worker</code> API from the Web Workers spec. Web Workers provide a simple means for web content to run scripts in background threads.</p>\n",
     "deps": [],
     "path": "./feature-detects/workers/webworkers.js",
     "amdPath": "test/workers/webworkers",
-    "name": "test/workers/webworkers",
-    "polyfills": [],
     "async": false,
-    "notes": [],
     "warnings": [],
-    "caniuse": null,
-    "cssclass": null,
-    "tags": [],
+    "cssclass": "webworkers",
     "authors": [],
     "knownBugs": []
   }
