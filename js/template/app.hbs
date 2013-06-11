@@ -1,4 +1,4 @@
-<h1>{{this.length}} Tests!</h1>
+<h1>{{this.length}} Modernizr Tests</h1>
 
 <ul>
   {{#each .}}
@@ -34,7 +34,13 @@
     <h5>Notes</h5>
     <ul class="test-notes">
       {{#each notes}}
-      <li><a href="{{href}}">{{name}}</a></li>
+      <li>
+        {{#ifIsLink .}}
+        <a href="{{href}}">{{name}}</a>
+        {{else}}
+        {{.}}
+        {{/ifIsLink}}
+        </li>
       {{/each}}
     </ul>
     {{/if}}
