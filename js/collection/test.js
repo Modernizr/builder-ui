@@ -5,6 +5,6 @@ define(function( require ) {
   return Backbone.Collection.extend({
     name: 'TestCollection',
     model: TestModel,
-    url: '/data/metadata.json'
+    url: './data/metadata.json'
   });
 });

@@ -1,7 +1,7 @@
 // Quick shims and setup to make urls and external
 // libs happy
 requirejs.config({
-  baseUrl: './js/',
+  baseUrl: window.location.pathname + 'js/',
   shim: {
     'backbone': {
       deps: ['underscore', 'jquery'],
