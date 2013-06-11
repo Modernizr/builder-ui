@@ -10,6 +10,10 @@ requirejs.config({
     'underscore': {
       exports: '_'
     }
+  },
+  hbs: {
+    templateExtension : 'hbs',
+    disableI18n : true
   }
 });
 
@@ -23,21 +27,37 @@ define(function( require ) {
   var AppView  = require('view/app');
   var TestCollection  = require('collection/test');
 
-  // Create some top level State and UI
-  var app = {
-    model: new AppModel(),
-    view: new AppView()
-  };
-
   // Create our list of available tests
   var tests = new TestCollection();
+
+  // Create some top level State and UI
+  var appModel = new AppModel();
+  var app = {
+    model: appModel,
+    view: new AppView({
+      // The main container element on the page
+      el: '#builder-container',
+      model: appModel
+    })
+  };
 
   // Set the tests as a property of our app
   // model
   app.model.set('tests', tests);
 
-  // Fetch the list of tests
+  // Listen for the data coming in
+  tests.on('sync', function (d) {
+    app.model.trigger('change:tests');
+  });
+
+  app.model.on('change:tests', function() {
+    app.view.render();
+  });
+
+  // Make the call for data
   tests.fetch();
 
+  // Make debugging a little easier
+  // and leak a global
   window.app = app;
 });

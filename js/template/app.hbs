@@ -1,0 +1,83 @@
+<h1>{{this.length}} Tests!</h1>
+
+<ul>
+  {{#each .}}
+  <li>
+  <h3>{{name}}
+    {{#if property}}
+    &mdash;
+    <ul>
+    {{#eachOrOnce property}}
+      <li><code>Modernizr.{{.}}</code></li>
+    {{/eachOrOnce}}
+    </ul>
+    {{/if}}
+  </h3>
+
+    {{#if async}}
+    <span class="async-test">Async!</span>
+    {{/if}}
+
+    {{#if tags}}
+    <div class="test-tags">
+      <h4>Tags</h4>
+
+      <ul>
+      {{#each tags}}
+        <li>{{.}}</li>
+      {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+
+    {{#if notes}}
+    <h5>Notes</h5>
+    <ul class="test-notes">
+      {{#each notes}}
+      <li><a href="{{href}}">{{name}}</a></li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+
+
+    {{#if polyfills}}
+    <div class="test-polyfills">
+      <h4>Polyfills</h4>
+
+      <ul>
+      {{#each polyfills}}
+        <li>
+          <a href="{{href}}">{{name}}</a>
+          {{#if authors}}
+          by
+          <ul class="test-polyfills-authors">
+            {{#each authors}}
+              <li>{{.}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+
+          {{#if notes}}
+          <h5>Polyfill Notes</h5>
+          <ul class="test-polyfills-notes">
+            {{#each notes}}
+              <li>{{.}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </li>
+      {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+
+    {{#if doc}}
+    <div class="test-docs">
+      <h4>Documentation</h4>
+      {{{doc}}}
+    </div>
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>
