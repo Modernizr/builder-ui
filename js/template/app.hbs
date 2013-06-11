@@ -3,19 +3,27 @@
 <ul>
   {{#each .}}
   <li>
-  <h3>{{name}}
+  <h3>{{name}}</h3>
+
+  <div class="test-data">
+
     {{#if property}}
-    &mdash;
-    <ul>
-    {{#eachOrOnce property}}
-      <li><code>Modernizr.{{.}}</code></li>
-    {{/eachOrOnce}}
-    </ul>
+    <div class="test-properties">
+      <h4>Properties</h4>
+      <ul>
+      {{#eachOrOnce property}}
+        <li><code>Modernizr.{{.}}</code></li>
+      {{/eachOrOnce}}
+      </ul>
+    </div>
     {{/if}}
-  </h3>
 
     {{#if async}}
     <span class="async-test">Async!</span>
+    {{/if}}
+
+    {{#if caniuse}}
+    <a href="http://caniuse.com/search?={{caniuse}}" class="caniuse-test">caniuse</a>
     {{/if}}
 
     {{#if tags}}
@@ -31,7 +39,7 @@
     {{/if}}
 
     {{#if notes}}
-    <h5>Notes</h5>
+    <h4>Notes</h4>
     <ul class="test-notes">
       {{#each notes}}
       <li>
@@ -45,7 +53,31 @@
     </ul>
     {{/if}}
 
+    {{#if knownBugs}}
+    <h4>Known Bugs</h4>
+    <ul class="test-knownBugs">
+      {{#each knownBugs}}
+      <li>
+        {{#ifIsLink .}}
+        <a href="{{href}}">{{name}}</a>
+        {{else}}
+        {{.}}
+        {{/ifIsLink}}
+        </li>
+      {{/each}}
+    </ul>
+    {{/if}}
 
+    {{#if deps}}
+    <div class="test-deps">
+      <h4>Code Dependencies</h4>
+      <ul>
+        {{#each deps}}
+        <li><code>{{.}}</code></li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
 
     {{#if polyfills}}
     <div class="test-polyfills">
@@ -84,6 +116,8 @@
       {{{doc}}}
     </div>
     {{/if}}
+
+    </div>
   </li>
   {{/each}}
 </ul>
