@@ -1990,7 +1990,7 @@
   {
     "name": "CSS Mask",
     "caniuse": "css-masks",
-    "property": "lastchild",
+    "property": "cssmask",
     "tags": [
       "css"
     ],
@@ -2022,7 +2022,7 @@
     "polyfills": [],
     "async": false,
     "warnings": [],
-    "cssclass": "lastchild",
+    "cssclass": "cssmask",
     "authors": [],
     "knownBugs": []
   },
